@@ -1,0 +1,18 @@
+/* Centrar el logo dentro de la tarjeta */
+.logo {
+  text-align: center;
+  margin-bottom: 1rem;
+
+  img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Estilo para el párrafo de copyright */
+copyright {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 1rem;
+}

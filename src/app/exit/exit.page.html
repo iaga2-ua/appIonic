@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>exit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">exit</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Are you sure you want to close this app?
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="button-group">
+        <ion-button color="primary" (click)="exitApp()">YES</ion-button>
+        <ion-button color="danger" (click)="navigateWiki()">NO</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

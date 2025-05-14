@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
   standalone: false,
 })
-export class AppComponent {
-  constructor() {}
+export class AppComponent implements OnInit {
+  readonly menuFile:string = '../assets/data/menu.json';
+  menuOptions= [];
+
+  constructor(public toastController: ToastController) {
+    //this.presentToast();
+  }
+
+  ngOnInit() {
+      this.getMenu();
+  }
+
+  getMenu() {
+    fetch(this.menuFile)
+      .then(response => response.json())
+      .then(json=> {
+        this.menuOptions = json;
+        console.log(this.menuOptions);
+      });
+  }
 }
